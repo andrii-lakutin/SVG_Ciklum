@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		@keyframes breathe {
+		    0%   {
+		    	/*transform: rotate(0deg);*/
+		    	/*transform: translateX(1000px);*/
+		    	stroke-width: 100;
+		    	/*stroke-dashoffset: 0;*/
+  			}
+
+  			25%   {
+		    	stroke-width: 50;
+  			}
+
+  			50%   {
+		    	stroke-width: 100;
+  			}
+
+  			75%   {
+		    	stroke-width: 50;
+  			}
+
+		    100% {
+		    	/*transform: rotate(360deg);*/
+		    	/*transform: translateX(0px);*/
+		    	/*14510 length*/
+		    	stroke-width: 100;
+  				/*stroke-dashoffset: 14510; */
+		    }
+		}
+
+		@keyframes rotate {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes topAnimation {
+			0% {
+				stroke-dasharray: 410px 13016px;
+    			stroke-dashoffset: 1725;
+				fill: #FFFFFF;
+			}
+
+			25% {
+				fill: #FFFFFF;
+			}
+
+			100% {
+				stroke-dasharray: 12616px 0px;
+    			stroke-dashoffset: 6400;
+				fill: #FF6F00;
+			}
+		}
+
+		.top {
+			fill: #FF6F00;
+			/* fill: url(#top-gradient); */
+			/* animation: rotate 2s infinite cubic-bezier(.87,-.41,.19,1.44); */
+			animation: topAnimation 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			/* animation: todorashko 1.5s infinite linear; */
+			transform-origin: 58% 50%;
+			/* stroke: #FF6F00; */
+			stroke: url(#top-gradient);
+			stroke-width: 10;
+			stroke-linejoin: round;
+    		stroke-linecap: round;
+		}
+
+
+		@keyframes midAnimation {
+			0% {
+				stroke-dasharray: 300px 6000px;
+				stroke-dashoffset: 385;
+				fill: #FFFFFF;
+			}
+
+			50% {
+				fill: #FFFFFF;
+			}
+
+			100% {
+				stroke-dasharray: 6640px 0px;
+    			stroke-dashoffset: 3210;
+				fill: #03A9F4;
+			}
+		}
+		
+		/* 6640 */
+		.mid {
+			fill: #03A9F4;
+			/* fill: url(#mid-gradient); */
+			/* animation: rotate 2s infinite cubic-bezier(.87,-.41,.19,1.44); */
+			animation: midAnimation 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			transform-origin: 79% 52%;
+			stroke-linejoin: round;
+    		stroke-linecap: round;
+			/* stroke: #03A9F4; */
+			stroke: url(#mid-gradient);
+			stroke-width: 10;
+		}
+
+		@keyframes botAnimation {
+			0% {
+				stroke-dasharray:  210px 3905px;
+				stroke-dashoffset: 295;
+				fill: #FFFFFF;
+			}
+
+			75% {
+				fill: #FFFFFF;
+			}
+
+			100% {
+				stroke-dasharray: 3905px 0px;
+    			stroke-dashoffset: 1650;
+				fill: #311B92;
+			}
+		}
+
+		.bot {
+			fill: #311B92;
+			/* fill: url(#bot-gradient); */
+			/* animation: rotate 2s infinite cubic-bezier(.87,-.41,.19,1.44); */
+			animation: botAnimation 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			transform-origin: 59% 60%;
+			stroke-linejoin: round;
+    		stroke-linecap: round;
+			/* stroke: #311B92; */
+			stroke: url(#bot-gradient);;
+			stroke-width: 10;
+		}
+
+		/* .top1 {
+			fill: #311B92;
+		}
+
+		.top2 {
+			fill: orange;
+		}
+
+		.top3 {
+			fill: red;
+		} */
+
+		@keyframes slideUp {
+			0% {
+				transform: translateY(50px);
+			}
+
+			100% {
+				transform: translateY(0px);
+			}
+		}
+
+		@keyframes showUp {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.logo-images {
+			padding-top: 178px;
+		}
+
+		.logo-images img {
+			margin-left: -70px;
+		}
+
+		svg {
+			float: left;
+		}
+
+		img[src="Ciklum_logo.png"] {
+			animation: slideUp 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+		}
+
+		img[src="Ciklum_substring.png"] {
+			animation: showUp 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			animation-delay: 1.1s;
+			animation-fill-mode: backwards;
+			padding-left: 10px;
+			margin-top: -10px;
+		}
+	</style>
+</head>
+<body>
+	<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+	 width="400.000000pt" height="400.000000pt" viewBox="0 0 400.000000 400.000000"
+	 preserveAspectRatio="xMidYMid meet">
+
+	 	<linearGradient id="top-gradient">
+			<stop offset="0%" stop-color="rgb(255,127,0)"/>
+			<stop offset="100%" stop-color="rgb(255,84,0)"/>
+		</linearGradient>
+
+		<linearGradient id="mid-gradient">
+			<stop offset="0%" stop-color="rgb(74,168,214)"/>
+			<stop offset="100%" stop-color="rgb(60,150,200)"/>
+		</linearGradient>
+		
+		<linearGradient id="bot-gradient">
+			<stop offset="0%" stop-color="rgb(99,84,117)"/>
+			<stop offset="100%" stop-color="rgb(53,43,61)"/>
+		</linearGradient>
+
+		<g transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)"
+		fill="#000000" stroke="none">
+			<path class='top' d="M1843 3579 c-247 -24 -492 -109 -700 -245 -89 -57 -232 -173 -267
+			-216 -11 -13 -44 -50 -74 -83 -165 -181 -297 -453 -353 -725 -31 -152 -33
+			-411 -5 -570 106 -601 564 -1099 1146 -1245 151 -38 245 -49 405 -48 395 2
+			755 141 1050 407 l50 45 -161 162 -162 162 -63 -53 c-137 -115 -286 -192 -457
+			-237 -84 -22 -118 -26 -257 -26 -166 -1 -233 9 -367 53 -310 102 -570 358
+			-682 668 -52 145 -61 204 -60 387 1 151 4 181 27 270 51 189 156 371 295 510
+			229 229 553 345 878 314 239 -22 454 -115 627 -270 l59 -52 164 164 c188 188
+			182 157 54 264 -256 213 -552 336 -882 365 -125 11 -146 11 -265 -1z"/>
+			<path class='mid' d="M1625 3010 c-249 -86 -482 -298 -599 -545 -189 -396 -113 -858 194
+			-1189 66 -72 203 -172 295 -216 174 -84 322 -115 515 -107 129 5 260 30 260
+			51 0 6 -14 56 -31 111 -17 55 -36 117 -41 138 -10 37 -13 39 -42 33 -204 -43
+			-368 -23 -536 65 -336 174 -486 574 -350 928 71 184 222 339 400 412 92 38 89
+			14 26 208 l-41 128 -50 -17z"/>
+			<path class='bot' d="M1433 2448 c-52 -64 -106 -172 -129 -258 -27 -100 -25 -274 5 -370
+			66 -216 217 -382 421 -463 144 -57 327 -62 475 -12 86 28 203 96 247 142 l28
+			29 -84 83 -85 84 -36 -31 c-73 -65 -180 -102 -289 -102 -383 1 -598 423 -375
+			735 l42 57 -79 79 c-43 43 -83 79 -89 79 -5 0 -29 -23 -52 -52z"/>
+		</g>
+	</svg>
+
+	<!-- <svg viewBox="0 0 800 600">
+		<path class='top1' d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+	</svg>
+
+	<svg viewBox="0 0 800 600">
+		<path  class='top2' d="M300,320 L540,320" id="middle"></path>
+	</svg>
+
+	<svg viewBox="0 0 800 600">
+		<path class='top3' d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+	</svg> -->
+
+	<div class="logo-images">
+		<img src="Ciklum_logo.png"/>
+		<br/>
+		<img src="Ciklum_substring.png"/>
+	</div>	
+</body>
+</html>
